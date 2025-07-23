@@ -15,4 +15,5 @@ pico_sdk_init()
 add_library(bager_lib STATIC src/main.c)
 
 # Pull in our pico_stdlib which pulls in common libraries
-target_link_libraries(bager_lib pico_stdlib)
+# Pull in hardware_pwm for motor control
+target_link_libraries(bager_lib pico_stdlib hardware_pwm)
